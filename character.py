@@ -1,6 +1,8 @@
-﻿from attributes import Attributes
+﻿import inspect
+from attributes import Attributes
 from skills import Skills
 from inventory import Inventory
+from position import Position
 
 class Character:
     def __init__(self, name = "prisoner", inventory = None, equipped = None, attributes = None,
@@ -51,3 +53,17 @@ class Character:
             self.quests = quests
         else:
             self.quests = []
+
+    def compare(self, character):
+        """Compares this character with another, and outputs a list of attributes and values that are different with the other values"""
+        ourAttributes = inspect.getmembers(self, lambda a:not(inspect.isroutine(a)))
+        ourAttributes = [a for a in ourAttributes if not(a[0].startswith('__') and a[0].endswith('__'))]
+        theirAttributes = inspect.getmembers(character, lambda a:not(inspect.isroutine(a)))
+        theirAttributes = [a for a in theirAttributes if not(a[0].startswith('__') and a[0].endswith('__'))]
+        changes = []
+
+        for i in range(len(ourAttributes)):
+            if ourAttributes[i][1] != theirAttributes[i][1]:
+                changes.append(theirAttributes[i])
+
+        return changes

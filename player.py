@@ -1,8 +1,9 @@
 ﻿from character import Character
+from position import Position
 
 class Player:
     def __init__(self, name = "NewPlayer", character = None, position = None, loadedcells = None,
-                 inputs = None):
+                 inputs = None, connection = None):
         self.name = name
         if character:
             self.character = character
@@ -11,12 +12,16 @@ class Player:
         if position:
             self.position = position
         else:
-            pass #TODO make a default position
+            self.position = Position()
         if loadedcells:
             self.loadedcells = loadedcells
         else:
-            pass #TODO make a default list of loadedcells
+            self.loadedcells = []
         if inputs:
             self.inputs = inputs
         else:
-            pass #TODO make a default list of inputs
+            self.inputs = []
+        if connection:
+            self.connection = connection
+        else:
+            self.connection = None
