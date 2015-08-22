@@ -1,4 +1,4 @@
-class Skills:
+﻿class Skills:
     def __init__(self, acrobatics = 1, alchemy = 1, alteration = 1, armorer = 1, athletics = 1,
                  blade = 1, block = 1, blunt = 1, conjuration = 1, destruction = 1, handtohand = 1,
                  heavyarmor = 1, illusion = 1, lightarmor = 1, marksman = 1, mercantile = 1,
@@ -24,3 +24,7 @@ class Skills:
         self.security = security
         self.sneak = sneak
         self.speechcraft = speechcraft
+
+    def compare(self, skills):
+        pass    #TODO Compare skills for changes
+        return []

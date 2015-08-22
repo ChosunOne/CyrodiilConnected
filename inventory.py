@@ -10,3 +10,7 @@
         self.weight = 0
         for i in self.items:
             self.weight += i.weight
+
+    def compare(self, inventory):
+        pass #TODO Compare inventories
+        return []

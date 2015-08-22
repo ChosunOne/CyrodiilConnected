@@ -64,6 +64,13 @@ class Character:
 
         for i in range(len(ourAttributes)):
             if ourAttributes[i][1] != theirAttributes[i][1]:
-                changes.append(theirAttributes[i])
+                if ourAttributes[i][0] == "attributes":
+                    pass
+                elif ourAttributes[i][0] == "skills":
+                    pass
+                elif ourAttributes[i][0] == "inventory":
+                    pass
+                else:
+                    changes.append(theirAttributes[i])
 
         return changes

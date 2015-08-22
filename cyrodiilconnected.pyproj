@@ -28,9 +28,11 @@
     <Compile Include="armor.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="cell.py" />
     <Compile Include="character.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="client.py" />
     <Compile Include="effect.py">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +45,7 @@
     <Compile Include="player.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="position.py" />
     <Compile Include="quest.py">
       <SubType>Code</SubType>
     </Compile>
