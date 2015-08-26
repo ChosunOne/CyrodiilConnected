@@ -7,7 +7,7 @@ from position import Position
 class Character:
     def __init__(self, name = "prisoner", inventory = None, equipped = None, attributes = None,
                  skills = None, level = 1, health = 100, fatigue = 100, magicka = 10, race = "imperial", 
-                 encumbrance = 0, sneak = False, effects = None, spells = None, 
+                 encumbrance = 0, sneak = False, effects = None, spells = None, sex = "male",
                  actions = None, gold = 0, quests = None, notoriety = 0, bounty = 0, fame = 0):
         self.name = name
         self.level = level
@@ -21,6 +21,7 @@ class Character:
         self.bounty = bounty
         self.gold = gold
         self.fame = fame
+        self.sex = sex
         if inventory:
             self.inventory = inventory
         else:
